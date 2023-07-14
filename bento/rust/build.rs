@@ -308,13 +308,13 @@ fn main() {
     builder = builder.header("src/bindings_helper.h");
 
     for t in INCLUDED_TYPES {
-        builder = builder.whitelist_type(t);
+        builder = builder.allowlist_type(t);
     }
     for f in INCLUDED_FUNCTIONS {
-        builder = builder.whitelist_function(f);
+        builder = builder.allowlist_function(f);
     }
     for v in INCLUDED_VARS {
-        builder = builder.whitelist_var(v);
+        builder = builder.allowlist_var(v);
     }
     for t in OPAQUE_TYPES {
         builder = builder.opaque_type(t);

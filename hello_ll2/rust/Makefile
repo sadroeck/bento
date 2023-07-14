@@ -12,7 +12,7 @@ kernel:
 
 userspace:
 	cp src/* userspace/src/
-	(cd userspace; cargo build --release --features "user")
+	(cd userspace; cargo +nightly build --release --features "user")
 
 clean:
 	$(MAKE) -C $(KDIR) M=$(CURDIR)/kernel clean
